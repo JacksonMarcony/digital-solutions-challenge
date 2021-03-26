@@ -1,0 +1,25 @@
+{
+  "name": "digital-solutions-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacksonMarcony/digital-solutions-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JacksonMarcony/digital-solutions-challenge/issues"
+  },
+  "homepage": "https://github.com/JacksonMarcony/digital-solutions-challenge#readme",
+  "dependencies": {
+    "node-cron": "^3.0.0",
+    "node-mailjet": "^3.3.1"
+  }
+}
