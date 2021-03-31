@@ -1,12 +1,17 @@
 const mongoose = require('mongoose')
+
 const leadSchema = require('./lead-modal')
+const eventSchema = require('./event-modal') 
 
-mongoose.connect('mongodb://localhost:27017/', 
-    {useNewUrlParser: true, 
-    useUnifiedTopology: true})
-    .then(resolve => console.log("banco conectado", resolve))
-    .catch(error => console.log(error))
+mongoose.Promise = global.Promise
+mongoose.connect('mongodb://localhost/push-leads', {
+	useNewUrlParser: true, useUnifiedTopology: true
+})
+    .then(resolve => console.log("banco conectado"))
+    .catch(error => console.log("deu erro ao conectar", error))
 
-mongoose.model('Lead', leadSchema)
 
-module.exports = mongoose
+const lead = leadSchema
+const event = eventSchema
+
+module.exports = {lead, event}
