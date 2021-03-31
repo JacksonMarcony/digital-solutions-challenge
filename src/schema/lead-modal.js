@@ -1,8 +1,18 @@
-const mongoose = require('./index')
+const mongoose = require('mongoose')
 
 const leadSchema = mongoose.Schema({
-    name: String,
-    email: String
+    name: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    date: {
+        type: Date,
+        default: Date.now
+    }
 })
 
-module.exports = leadSchema
+module.exports = mongoose.model('leads', leadSchema)
